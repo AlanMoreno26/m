@@ -11,7 +11,7 @@ while(program):
     #storing all current names, addresses, and phone numbers
 
 
-    print("1. Enter Contact\n2.Add Contact\n3.Exit")
+    print("1. Enter Contact\n2.Add Contact\n3. DEBUG Get Name\n4.Exit")
     get_input = int(input("Choose option: "))
     
     if(get_input == 1):
@@ -25,7 +25,9 @@ while(program):
         else:
             contact.add_contact()
     elif(get_input == 3):
+        print(contact.get_names())
+    elif(get_input == 4):
         print("Goodbye")
-        program = False
+        program = False    
     else:
         print("Invalid option")
